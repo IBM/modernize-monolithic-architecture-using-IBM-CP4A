@@ -20,8 +20,8 @@ If too much workload or user traffic occurs on one service, then all of the othe
 
 To break down this monolithic application, you separate the admin services (`admin_login.ejs` and `admin.ejs`) and user services (`user_login.ejs` and `users.ejs`) into microservices so they can run independently. Both services have different functions, so the new application is able to scale them depending on the workload. The two new microservices are:
 
-* [Admin microservice](https://github.com/mahsankhaan/micro-admin)
-* [User microservice](https://github.com/mahsankhaan/micro-user)
+* [Admin microservice](https://github.com/IBM/modernize-monolithic-architecture-using-IBM-CP4A/tree/micro-admin)
+* [User microservice](https://github.com/IBM/modernize-monolithic-architecture-using-IBM-CP4A/tree/micro-user)
 
 To do this, you put the admin services into one project and the user services into another, and then deploy them both to a central GitHub repo. Both have their own dependencies and run independently, as you can see in the following architecture diagram. (Don't worry if this does not fully make sense to you right now. The tutorial steps explain it further.)
 

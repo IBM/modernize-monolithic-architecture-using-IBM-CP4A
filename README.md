@@ -20,8 +20,8 @@ If too much workload or user traffic occurs on one service, then all of the othe
 
 To break down this monolithic application, you separate the admin services (`admin_login.ejs` and `admin.ejs`) and user services (`user_login.ejs` and `users.ejs`) into microservices so they can run independently. Both services have different functions, so the new application is able to scale them depending on the workload. The two new microservices are:
 
-* [Admin microservice](https://github.com/IBM/modernize-monolithic-architecture-using-IBM-CP4A/tree/micro-admin)
-* [User microservice](https://github.com/IBM/modernize-monolithic-architecture-using-IBM-CP4A/tree/micro-user)
+* [Admin microservice](https://github.com/IBM/micro-admin)
+* [User microservice](https://github.com/IBM/micro-user)
 
 To do this, you put the admin services into one project and the user services into another, and then deploy them both to a central GitHub repo. Both have their own dependencies and run independently, as you can see in the following architecture diagram. (Don't worry if this does not fully make sense to you right now. The tutorial steps explain it further.)
 
@@ -188,8 +188,8 @@ Since you know which services will be converted into microservices, start by ini
 
 *Note:* If you have any difficulty executing this step to create both microservices, please check out the following sample repositories that were created using Codewind:
 
-* [Admin microservice](https://github.com/mahsankhaan/micro-admin.git)
-* [User microservice](https://github.com/mahsankhaan/micro-user.git)
+* [Admin microservice](https://github.com/IBM/micro-admin)
+* [User microservice](https://github.com/IBM/micro-user)
 
 ### Step 3. Create GitHub tokens
 
@@ -237,16 +237,13 @@ To initialize Tekton, perform the following tasks:
    ![Screen capture of Tekton Pipelines page](images/s5.png)
 
 1. Select **Webhooks** from the menu and proceed to create two webhooks for your microservices (`micro-admin` and `micro-user`).
-1. For the first webhook, enter `w1-admin` in the __Name__ field, `https://github.com/mahsankhaan/micro-admin.git` in the __Repository URL__ field, and `micro-token-1` in the __Access Token__ field.
+1. For the first webhook, enter `w1-admin` in the __Name__ field, `https://github.com/IBM/micro-admin` in the __Repository URL__ field, and `micro-token-1` in the __Access Token__ field.
 
-   ![Screen capture of Webhook Settings page for creating the `w1-admin` webhook](images/s7.png)
 
    Click __Create__.
 
-1. For the second webhook, enter `w2-user` in the __Name__ field, `https://github.com/mahsankhaan/micro-user.git` in the __Repository URL__ field, and `micro-token-2` in the __Access Token__ field. Click __Create__.
+1. For the second webhook, enter `w2-user` in the __Name__ field, `https://github.com/IBM/micro-user` in the __Repository URL__ field, and `micro-token-2` in the __Access Token__ field. Click __Create__.
 
-
-   ![Screen capture of Webhook Settings page for creating the `w2-user` webhook](images/s11.png)
 
 
 1. Check, Tekton and GitHub are successfully connected by opening your micro and admin repositories. Go to __micro-admin__ repository,under __settings__ select __Webhooks__ on left menu and if pipeline is connected properly then there must be a link on right `http://w1-admin-6zmvc.kabanero..` (you may have different link) . Kindly follow the same procedure for __micro-user__ repository.  

@@ -4,7 +4,7 @@ This tutorial shows how to transform a traditional monolithic core banking appli
 
 Cloud Pak for Applications speeds the development of applications that are built for Kubernetes by using agile DevOps processes. Running on Red Hat OpenShift, the Cloud Pak provides a hybrid, multicloud foundation that is built on open standards, enabling workloads and data to run anywhere. It integrates two main open source projects: [Kabanero](https://kabanero.io/) and [Appsody](https://appsody.dev/).
 
-This tutorial uses a [sample monolithic banking application](https://github.com/mahsankhaan/cloud-pak-for-applications.git), which is illustrated in the following architecture diagram:
+This tutorial uses a [sample monolithic banking application](https://github.com/IBM/modernize-monolithic-architecture-using-IBM-CP4A.git), which is illustrated in the following architecture diagram:
 
 ![Architecture diagram of sample monolithic application](images/m1.png)
 
@@ -51,7 +51,7 @@ After the prerequisites are installed, this tutorial will take 90min to complete
 ### Step 1. Clone the GitHub repository
 
 1. Open your terminal and change your directory by using the `cd downloads` command. (Or any other directory in which you want to clone the project.)
-1. Run the command: `git clone https://github.com/mahsankhaan/cloud-pak-for-applications.git`.
+1. Run the command: `git clone https://github.com/IBM/modernize-monolithic-architecture-using-IBM-CP4A.git`.
 1. Open the project in Visual Studio.
 
    ![Screen capture of project in Visual Studio Code](images/sc.png)
